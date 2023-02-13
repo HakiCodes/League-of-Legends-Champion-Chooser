@@ -5,15 +5,15 @@ def choose_value():
     # Ask the user about the threat
     threat = input("Does the enemy team have threat onto you? (Yes/No) ")
     if threat.lower() == "yes":
-        scores[0] += 3
-        scores[2] += 4
+        scores[0] += 2
+        scores[2] += 3 
     elif threat.lower() == "no":
         scores[0] += 2
         scores[1] += 3
         scores[2] += 1
     print(scores)
 
-    # Ask the user about the long range
+    # Ask the user about the range
     long_range = input("Is the opponent long-ranged? (Yes/No) ")
     if long_range.lower() == "yes":
         scores[0] += 2
@@ -50,4 +50,4 @@ def choose_value():
         return values[scores.index(highest_score)]
 
     # Test the function
-    print(choose_value())  # Output: "Ahri" or "Akali"
+print(choose_value())  # Output: "Ahri" or "Akali"
